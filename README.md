@@ -23,3 +23,7 @@ Character images are sourced from the Zelda fan wiki:
 Background image used in the quiz:
 
 [Hyrule Background](https://wallpapercave.com/w/wp3277283)(https://wallpapercave.com/w/wp3277283)
+
+---
+
+[Play the Zelda Quiz Game](https://botw-quiz-game.netlify.app/)
