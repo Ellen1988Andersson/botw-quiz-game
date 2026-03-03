@@ -1,0 +1,230 @@
+/* FONTS */
+@font-face {
+    font-family: "The Wild Breath of Zelda";
+    src: url("assets/images/fonts/The Wild Breath of Zelda.otf") format("opentype");
+}
+
+/* --- GLOBAL STYLE --- */
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "The Wild Breath of Zelda", 'Audiowide', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: linear-gradient(45deg, #06133c, #0e2a88, #4867c6);
+}
+
+#game-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* --- HEADER / START PAGE --- */
+#quiz-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#quiz-image {
+    width: 100%;
+    height: auto;
+}
+
+#quiz-image.hidden {
+    display: none;
+}
+
+#start-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#start-page h2 {
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 10px;
+
+    background: linear-gradient(45deg,
+            #111111 0%,
+            #000000 35%,
+            #dcdcdc 48%,
+            #ffffff 50%,
+            #dcdcdc 52%,
+            #000000 65%,
+            #111111 100%);
+
+    background-size: 300% 300%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#start-page p {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.choice-btn,
+.btn,
+.restart-btn,
+.next-btn {
+    font-family: "The Wild Breath of Zelda", 'Audiowide', cursive;
+    background-color: #7294fb71;
+    font-size: 1.2rem;
+    color: #000000;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    letter-spacing: 0.2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    border: 1.5px solid #00014a;
+}
+
+.choice-btn:hover,
+.btn:hover,
+.restart-btn:hover,
+.next-btn:hover {
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* --- MAIN QUIZ --- */
+.container {
+    text-align: center;
+}
+
+.question-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.correct {
+    background-color: #00e016e1;
+}
+
+.wrong {
+    background-color: #ff0000c9;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* --- CONTROLS --- */
+.controls {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* --- RESULTS / WRONG CARDS --- */
+#result-container {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 800px;
+    font-size: 1.6rem;
+}
+
+/* RESULT CARD */
+#result-card {
+    background-color: #0e2a88;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    grid-column: 1 / -1;
+    letter-spacing: 0.1rem;
+}
+
+#wrong-cards-wrapper {
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+#wrong-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-content: center;
+    gap: 20px;
+    max-width: 100%;
+    font-size: 1.4rem;
+}
+
+.card {
+    background-color: #0e2a88;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    letter-spacing: 0.1rem;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.correct-name {
+    color: #00e016e1;
+    font-size: 1.2rem;
+}
+
+.your-answer {
+    color: #ff0000c9;
+    font-size: 1.2rem;
+}
+
+/* --- HIDE ELEMENT --- */
+.hide {
+    display: none;
+}

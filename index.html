@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zelda Quiz</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+  <div id="game-container">
+
+    <!-- HEADER / START PAGE -->
+    <header id="quiz-header">
+      <img id="quiz-image" src="assets/images/bg.jpg" alt="bild på hyrule kingdom">
+
+      <div id="start-page">
+        <h2>Zelda Characters Quiz</h2>
+        <p>How many questions?</p>
+        <div class="button-row">
+          <button class="choice-btn" data-count="5">FIVE</button>
+          <button class="choice-btn" data-count="10">TEN</button>
+          <button class="choice-btn" data-count="ALL">ALL</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN QUIZ CONTENT -->
+    <main class="container">
+
+      <!-- QUESTION IMAGE -->
+      <img id="question-image" src="assets/images/zeldaCharacters/" class="question-img hide" alt="Zelda character">
+
+      <!-- QUESTION CONTAINER -->
+      <div id="question-container" class="hide">
+        <div id="question"></div>
+        <div id="answer-buttons" class="btn-grid"></div>
+      </div>
+
+      <!-- RESULT CONTAINER -->
+      <div id="result-container" class="hide">
+        <div id="result-card" class="result-card hide">
+        </div>
+      </div>
+
+      <!-- WRONG ANSWERS CARDS -->
+      <div id="wrong-cards-wrapper" class="hide">
+        <div id="wrong-cards-container" class="wrong-cards-container"></div>
+      </div>
+
+      <!-- CONTROLS -->
+      <div class="controls">
+        <button id="restart-btn" class="restart-btn hide">Restart</button>
+        <button id="next-btn" class="next-btn hide">Next</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="zelda.js"></script>
+  <script src="quiz.js"></script>
+</body>
+
+</html>
