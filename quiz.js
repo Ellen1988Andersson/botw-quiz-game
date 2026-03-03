@@ -86,7 +86,7 @@ function resetState() {
 /* SHOW QUESTION */
 function showQuestion(question) {
     questionElement.innerText = question.question;
-    questionImage.src = '../' + question.character.image;
+    questionImage.src = question.character.image;
     questionImage.alt = question.character.name;
 
     question.answers.forEach(answer => {
@@ -213,7 +213,7 @@ function showResults() {
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
-            <img src="../${item.character.image}" alt="${item.character.name}">
+            <img src="${item.character.image}" alt="${item.character.name}">
             <p class="correct-name">This is: ${item.character.name}</p>
             <p class="your-answer">Your guess: ${item.guessed}</p>
         `;
