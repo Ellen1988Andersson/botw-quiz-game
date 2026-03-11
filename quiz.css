@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background: linear-gradient(45deg, #06133c, #0e2a88, #4867c6);
+    background: linear-gradient(45deg, #0a1f63, #1439b1, #3f5ed1, #6f89e8);
 }
 
 #game-container {
@@ -80,13 +80,16 @@ body {
 
 #start-page p {
     margin-bottom: 20px;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 .button-row {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    gap: 5px;
+    margin: 15px auto;
+    width: 40%;
 }
 
 .choice-btn,
@@ -98,13 +101,16 @@ body {
     font-size: 1.2rem;
     color: #000000;
     border-radius: 12px;
-    padding: 1rem;
+    padding: 0 20px;
     margin: 0.6rem;
     cursor: pointer;
     transition: all 0.2s ease;
-    letter-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-    border: 1.5px solid #00014a;
+    border: 1.5px solid #002fff37;
+    height: 60px;
+    line-height: 60px;
+    width: 175px;
 }
 
 .choice-btn:hover,
@@ -124,19 +130,21 @@ body {
     width: 200px;
     height: 200px;
     object-fit: contain;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 #question {
     font-size: 1.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .btn-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 175px);
     gap: 10px;
     margin: 20px 0;
+    justify-items: center;
+    justify-content: center;
 }
 
 .correct {
@@ -145,11 +153,11 @@ body {
 
 .wrong {
     background-color: #ff0000c9;
+    color: white;
 }
 
 button:disabled {
     cursor: not-allowed;
-    opacity: 0.6;
 }
 
 /* --- CONTROLS --- */
@@ -168,7 +176,7 @@ button:disabled {
 
 /* RESULT CARD */
 #result-card {
-    background-color: #0e2a88;
+    background-color: #7294fb71;
     color: white;
     border-radius: 12px;
     text-align: center;
@@ -193,7 +201,7 @@ button:disabled {
 }
 
 .card {
-    background-color: #0e2a88;
+    background-color: #7294fb71;
     margin-bottom: 20px;
     border-radius: 12px;
     text-align: center;
@@ -220,7 +228,7 @@ button:disabled {
 }
 
 .your-answer {
-    color: #ff0000c9;
+    color: #ffffff;
     font-size: 1.2rem;
 }
 
